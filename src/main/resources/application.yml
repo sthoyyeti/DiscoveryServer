@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Service Discovery Server
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: 192.168.0.108
+    client:
+      registerWithEureka: false
+      fetchRegistry: false
+      serviceUrl:
+        defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
